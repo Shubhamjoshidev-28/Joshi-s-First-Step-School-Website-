@@ -1,33 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Joshi’s First Step School</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css" />
 </head>
+
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <img src="images/logo.png" class="logo" alt="School Logo">
-    <nav>
-      <a href="Home">Home</a>
-      <a href="about.html">About</a>
-      <a href="announcements.html">Announcements</a>
-      <a href="why-join-us.html">Why Join Us</a>
-      <a href="activities.html">Activities</a>
-      <a href="students.html">Students</a>
-      <a href="admission.html">Admission</a>
-      <a href="fees.html">Fees</a>
-    </nav>
+  <!-- HEADER -->
+  <header>
+    <div class="nav-wrapper">
+     <div class="nav">
+      <div class="brand">
+        <img src="images/newlogo.png.png" alt="Schoollogo">
+        <span>JOSHI'S FIRST STEP</span>
+      </div>
+       
+       <nav class="menu">
+         <a href="#">Home</a>
+         <a href="#">About</a>
+         <a href="#">Admissions</a>
+         <a href="#">Activities</a>
+         <a href="#">Accounments</a>
+         <a href="#">Fees</a>
+         <a href="#">Student Data</a>
+         <a href="#">Contact</a>
+      </nav>
+
+     </div>
+    </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Joshi’s First Step School</h1>
-    <p>Building strong foundations for a brighter future</p>
+  <!-- SLIDESHOW -->
+  <section class="slider">
+    <div class="slide active">
+      <img src="images/girl.avif">
+      <div class="slide-text">
+        <h1>Happy Learning Environment</h1>
+        <p>Where Every Child Matters</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="images/slide2.jpg">
+      <div class="slide-text">
+        <h1>Experienced Teachers</h1>
+        <p>Guiding Students With Care</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="images/slide3.jpg">
+      <div class="slide-text">
+        <h1>Holistic Development</h1>
+        <p>Learning Beyond Classrooms</p>
+      </div>
+    </div>
+
+    <button class="arrow prev">&#10094;</button>
+    <button class="arrow next">&#10095;</button>
   </section>
 
-  <script src="js/main.js"></script>
+  <!-- INFO CARDS -->
+  <section class="cards">
+    <div class="card">
+      <h3>Experienced Teachers</h3>
+      <p>More than 10+ years of teaching experience with child-friendly methods.</p>
+    </div>
+
+    <div class="card">
+      <h3>Personalized Teaching</h3>
+      <p>Individual attention for every student to ensure proper growth.</p>
+    </div>
+
+    <div class="card">
+      <h3>Prime Location</h3>
+      <p>Located in a safe and accessible area with easy transport.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h4>Our School</h4>
+        <p>Building strong foundations for a brighter future.</p>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>📞 +91 99888 20977</p>
+        <p>✉️ pinkijoshi2015@gmail.com</p>
+      </div>
+
+      <div>
+        <h4>Address</h4>
+        <p>#390, Bharat colony<br>OldRajpura, Punjab</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Joshi’s First Step School
+    </div>
+  </footer>
+
+  <script src="js/home.js"></script>
+
 </body>
 </html>
