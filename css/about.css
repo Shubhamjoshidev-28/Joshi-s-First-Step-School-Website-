@@ -10,7 +10,7 @@
 .about-bg {
   position: absolute;
   inset: 0;
-  background: url("../images/about-bg.jpg") center / cover no-repeat;
+  background: url("../assets/images/about-bg.jpg") center / cover no-repeat;
   filter: blur(8px) brightness(40%);
   transform: scale(1.1);
   z-index: 0;
@@ -125,6 +125,15 @@
 .value-card p {
   color: #dddddd;
 }
+
+/* JOURNEY + TEACHER LAYOUT */
+.journey-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {

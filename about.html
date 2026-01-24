@@ -1,13 +1,22 @@
-<link rel="stylesheet" href="css/about.css">
-<link rel="stylesheet" href="css/header.css">
-<link rel="stylesheet" href="css/footer.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>about | Joshi's First Step</title>
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
+<body>
+  
+
  <!-- HEADER -->
   <header>
     <div class="nav-wrapper">
      <div class="nav">
       <div class="brand">
-        <img src="images/newlogo.png.png" alt="Schoollogo">
+        <img src="assets/images/newlogo.png.png" alt="Schoollogo">
         <span>JOSHI'S FIRST STEP</span>
         
       </div>
@@ -15,7 +24,7 @@
        <nav class="menu">
          <a href="Home.html">Home</a>
          <a href="about.html">About</a>
-         <a href="#">Admissions</a>
+         <a href="Admission.html">Admissions</a>
          <a href="#">Activities</a>
          <a href="#">Accounments</a>
          <a href="#">Fees</a>
@@ -106,31 +115,50 @@
  
    <!-- OUR JOURNEY -->
    <section class="about-section journey">
-     <h2 class="section-title">📘 Our Journey</h2>
- 
-     <div class="timeline">
-       <div class="timeline-item">
-         <span>2010</span>
-         <p>School established with 100 students and a vision for quality education.</p>
-       </div>
- 
-       <div class="timeline-item">
-         <span>2015</span>
-         <p>Expanded facilities with new science labs and sports complex.</p>
-       </div>
- 
-       <div class="timeline-item">
-         <span>2020</span>
-         <p>Introduced smart classrooms and digital learning platforms.</p>
-       </div>
- 
-       <div class="timeline-item">
-         <span>2026</span>
-         <p>Serving 500+ students with a team of 50+ dedicated educators.</p>
-       </div>
-     </div>
-   </section>
- 
+  <div class="journey-layout">
+
+    <!-- LEFT: EXISTING JOURNEY -->
+    <div class="journey-content">
+      <h2 class="section-title">📘 Our Journey</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <span>2010</span>
+          <p>School established with 100 students and a vision for quality education.</p>
+        </div>
+
+        <div class="timeline-item">
+          <span>2015</span>
+          <p>Expanded facilities with new science labs and sports complex.</p>
+        </div>
+
+        <div class="timeline-item">
+          <span>2020</span>
+          <p>Introduced smart classrooms and digital learning platforms.</p>
+        </div>
+
+        <div class="timeline-item">
+          <span>2026</span>
+          <p>Serving 500+ students with a team of 50+ dedicated educators.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: TEACHER PROFILE -->
+    <div class="teacher-card">
+      <img src="images/teacher.jpg" alt="Teacher Photo">
+
+      <h3>Mrs. Neha Joshi</h3>
+      <p class="designation">Senior Primary Teacher</p>
+
+      <p class="bio">
+        10+ years of experience in early childhood education.  
+        Specialized in child psychology, creative learning, and parent engagement.
+      </p>
+    </div>
+
+  </div>
+</section>
  </main>
  <!-- FOOTER -->
   <footer>
@@ -156,4 +184,6 @@
       © 2026 Joshi’s First Step School
     </div>
   </footer>
+</body>
 </head>
+</html>
