@@ -3,47 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>activities | Joshi's First Step</title>
+    <title>accounts | Joshi’s First Step</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/activities.css">
+    <link rel="stylesheet" href="css/announcements.css">
 </head>
 <body>
 <header>
     <div class="nav-wrapper">
-      <div class="nav">
-        <div class="brand">
-          <img src="assets/images/newlogo.png.png" alt="Schoollogo">
-          <span>JOSHI'S FIRST STEP</span>
-       </div>
+     <div class="nav">
+      <div class="brand">
+        <img src="assets/images/newlogo.png.png" alt="Schoollogo">
+        <span>JOSHI'S FIRST STEP</span>
+      </div>
        
        <nav class="menu">
          <a href="Home.html">Home</a>
          <a href="about.html">About</a>
          <a href="Admission.html">Admissions</a>
-         <a href="activities.html">Activities</a>
-         <a href="announcements.html">Accounments</a>
+         <a href="activites.html">Activities</a>
+         <a href="accounments.html">Accounments</a>
          <a href="#">Fees</a>
          <a href="#">Student Data</a>
          <a href="#">Contact</a>
       </nav>
 
+     </div>
     </div>
-  </div>
 </header>
 
-<section class="gallery-hero">
-  <h1>Activities & Photo Gallery</h1>
-  <p>Memories captured from school activities</p>
+<section class="announcements-list" id="announcementsList">
+  <p class="loading">Loading announcements...</p>
 </section>
-
-<!-- ONLY THIS CONTAINER -->
-<section class="gallery-grid" id="galleryGrid"></section>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
-</div>
 
 <!-- FOOTER -->
 <footer>
@@ -69,7 +60,6 @@
       © 2026 Joshi’s First Step School
     </div>
 </footer>
-<script src="js/activitiesdata.js"></script>
-<script src="js/activities.js"></script>
+<script src="js/announcements.js"></script>
 </body>
 </html>
