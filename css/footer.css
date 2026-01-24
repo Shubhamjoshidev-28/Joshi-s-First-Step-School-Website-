@@ -1,0 +1,42 @@
+/* ===== FOOTER ===== */
+    footer {
+      background: #df5110;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    footer h4 {
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      font-size: 14px;
+      color: #d1d5db;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #cccccc;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .cards {
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+      }
+
+      nav {
+        display: none;
+      }
+    }
