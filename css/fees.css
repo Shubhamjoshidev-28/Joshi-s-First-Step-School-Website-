@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: #0f1418;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* ===== CARD GRID ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #161b20;
+  border-radius: 16px;
+  padding: 28px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin-bottom: 6px;
+}
+
+/* ===== INSTRUCTIONS ===== */
+.instruction-box {
+  background: #0b3d23;
+  border-radius: 16px;
+  padding: 30px;
+  margin: 30px 20px;
+}
+
+.instruction-box h3 {
+  margin-bottom: 15px;
+}
+
+.instruction-box ol {
+  padding-left: 20px;
+}
+
+/* ===== GLASS BOX ===== */
+.glass-box {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 30px;
+  margin: 20px;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* ===== ADDITIONAL FEES ===== */
+.border-box {
+  border: 1px solid #7c3aed;
+  border-radius: 16px;
+  padding: 30px;
+  margin: 30px 20px;
+}
+
+.fee-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+/* ===== TABLE ===== */
+.table-box {
+  margin: 40px 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #161b20;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+th {
+  background: #0b4cc2;
+  padding: 14px;
+  text-align: left;
+}
+
+td {
+  padding: 14px;
+  border-bottom: 1px solid #222;
+}
+
+.page-header{
+    text-align: center;
+    margin: 40px 20px 20px 20px;
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .two-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-header h1 {
+    font-size: 42px;
+  }
+}
