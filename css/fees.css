@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #0f1418;
+  background: rgb(29, 29, 29);
   color: #e5e7eb;
   line-height: 1.6;
 }
@@ -37,7 +37,7 @@ body {
 
 /* ===== INSTRUCTIONS ===== */
 .instruction-box {
-  background: #0b3d23;
+  background: rgba(77, 18, 18, 0.585);
   border-radius: 16px;
   padding: 30px;
   margin: 30px 20px;
