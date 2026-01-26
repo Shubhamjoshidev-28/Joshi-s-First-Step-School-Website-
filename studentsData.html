@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>accounts | Joshi’s First Step</title>
+    <title>Students | Joshi's First Step</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/announcements.css">
+    <link rel="stylesheet" href="css/studentsData.css">
 </head>
 <body>
-<header>
+     <!-- HEADER -->
+  <header>
     <div class="nav-wrapper">
      <div class="nav">
       <div class="brand">
@@ -30,14 +31,21 @@
 
      </div>
     </div>
-</header>
+  </header>
+  <h1>Students Database</h1>
+  <p class="subtitle">
+    View our student directory. Data is synced with Google Sheets.
+  </p>
+  <div id="studentsGrid"></div>
+  <input id="searchInput" type="text" placeholder="Search by name or age">
 
-<section class="announcements-list" id="announcementsList">
-  <p class="loading">Loading announcements...</p>
+
+  <section class="students-page">
+  
+
 </section>
-
-<!-- FOOTER -->
-<footer>
+    <!-- FOOTER -->
+  <footer>
     <div class="footer-container">
       <div>
         <h4>Our School</h4>
@@ -59,7 +67,8 @@
     <div class="footer-bottom">
       © 2026 Joshi’s First Step School
     </div>
-</footer>
-<script src="js/announcements.js"></script>
+  </footer>
+
 </body>
+<script src="js/studentsData.js"></script>
 </html>
