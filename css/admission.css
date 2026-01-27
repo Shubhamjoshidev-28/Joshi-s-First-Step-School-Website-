@@ -183,3 +183,23 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+
+  .admission-hero h1 {
+    font-size: 26px;
+  }
+
+  .cta-box,
+  .docs-section,
+  .info-box,
+  .download-form {
+    padding: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+}

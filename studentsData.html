@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/studentsData.css">
+    <!-- <link rel="stylesheet" href="css/global-responsive.css"> -->
 </head>
 <body>
      <!-- HEADER -->
   <header>
     <div class="nav-wrapper">
      <div class="nav">
+      <button class="menu-toggle" aria-label="Toggle menu">
+         ☰
+       </button>
+
       <div class="brand">
         <img src="assets/images/newlogo.png.png" alt="Schoollogo">
         <span>JOSHI'S FIRST STEP</span>
@@ -33,9 +38,7 @@
     </div>
   </header>
   <h1>Students Database</h1>
-  <p class="subtitle">
-    View our student directory. Data is synced with Google Sheets.
-  </p>
+  
   <div id="studentsGrid"></div>
   <input id="searchInput" type="text" placeholder="Search by name or age">
 
@@ -73,4 +76,5 @@
 
 </body>
 <script src="js/studentsData.js"></script>
+<script src="js/menu.js"></script>
 </html>

@@ -48,8 +48,8 @@
   border-radius: 18px;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
 
-  width: fit-content;
-  max-width: 90%;
+  width: 100%;
+  max-width: 1100px;
 }
 
 /* ===== TITLES ===== */
@@ -148,5 +148,19 @@
   .about-section {
     max-width: 95%;
     padding: 24px 20px;
+  }
+}
+@media (max-width: 768px) {
+  .journey-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .timeline-item span {
+    min-width: auto;
   }
 }
