@@ -11,10 +11,18 @@ if (!grid) {
 fetch(SHEET_URL)
   .then(res => res.text())
   .then(csv => {
-    const rows = csv.split("\n").slice(1);
+    const rows = csv.trim().split("\n").slice(1);
 
     rows.forEach(row => {
-      const [title, date, cover] = row.split(",");
+      if (!row.trim()) return;
+
+      // Proper CSV-safe parsing
+      const parts = row.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
+      if (!parts || parts.length < 3) return;
+
+      const title = parts[0].replace(/"/g, "").trim();
+      const date  = parts[1].replace(/"/g, "").trim();
+      const cover = parts[2].replace(/"/g, "").trim();
 
       if (!title || !cover) return;
 
@@ -23,11 +31,11 @@ fetch(SHEET_URL)
 
       card.innerHTML = `
         <div class="image-wrapper">
-          <img src="${cover.trim()}" alt="${title.trim()}" loading="lazy">
+          <img src="${encodeURI(cover)}" alt="${title}" loading="lazy">
         </div>
         <div class="card-info">
-          <h3>${title.trim()}</h3>
-          <span>${date ? date.trim() : ""}</span>
+          <h3>${title}</h3>
+          <span>${date}</span>
         </div>
       `;
 
