@@ -1,5 +1,5 @@
 /* =====================
-   RESET & BASE
+   RESET & BASE STYLES
    ===================== */
 * {
   margin: 0;
@@ -8,74 +8,13 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-html, body {
-  width: 100%;
-}
-
 body {
   background: #f4f4f4;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
+  overflow-x: hidden; /* Prevents side-scrolling on mobile */
 }
 
 /* =====================
-   HEADER (DESKTOP)
-   ===================== */
-header {
-  background: #df5110;
-}
-
-.nav-wrapper {
-  width: 100%;
-}
-
-.nav {
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.brand img {
-  height: 40px;
-}
-
-.menu {
-  display: none;
-  gap: 18px;
-}
-
-.menu a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 14px;
-  padding: 6px 10px;
-}
-
-/* Toggle hidden on desktop */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 26px;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-/* =====================
-   HERO SLIDER
+   HERO SLIDER (BASE)
    ===================== */
 .slider {
   position: relative;
@@ -102,6 +41,7 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   filter: brightness(45%);
 }
 
@@ -126,13 +66,12 @@ header {
   font-size: clamp(14px, 2.5vw, 20px);
 }
 
-/* Slider arrows */
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background: rgba(0,0,0,0.6);
-  color: #ffffff;
+  color: #fff;
   border: none;
   font-size: 28px;
   padding: 10px 14px;
@@ -144,7 +83,7 @@ header {
 .next { right: 18px; }
 
 /* =====================
-   INFO CARDS
+   INFO CARDS (BASE)
    ===================== */
 .cards {
   max-width: 1200px;
@@ -176,26 +115,101 @@ header {
 }
 
 /* =====================
-   TABLET (≤1024px)
+   RESPONSIVE (PHONES & TABLETS)
    ===================== */
-@media (max-width: 1024px) {
-
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 768px) {
+  
+  /* 1. Header & Toggle Menu */
+  .nav-wrapper {
+    position: relative;
+    z-index: 1000;
   }
 
+  .menu-toggle {
+    display: block !important; /* Ensures it shows on mobile */
+    color: white;
+  }
+
+  .menu {
+    display: none; /* Hidden until 'active' class added via JS */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #df5110; /* Brand orange background for mobile menu */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  }
+
+  .menu.active {
+    display: flex; 
+  }
+
+  .menu a {
+    padding: 15px 20px;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* 2. Slider Adjustments */
   .slider {
-    height: 70vh;
-    min-height: 420px;
+    height: 50vh;
+    min-height: 320px;
+  }
+
+  .slide-text {
+    width: 85%;
+    padding: 0 20px;
+  }
+
+  .slide-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .slide-text p {
+    font-size: 0.95rem;
+    /* Limit lines on small screens to prevent overlap */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* 3. Card Stacking (Top to Bottom) */
+  .cards {
+    grid-template-columns: 1fr;
+    margin: 30px auto;
+    gap: 20px;
+  }
+
+  /* 4. Footer Alignment */
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+}
+
+/* VERY SMALL DEVICES */
+@media (max-width: 480px) {
+  .slide-text h1 {
+    font-size: 1.3rem;
+  }
+  
+  .arrow {
+    padding: 8px;
+    font-size: 18px;
   }
 }
 
 /* =====================
-   MOBILE (≤768px)
+   MOBILE HEADER FIX (HOME)
    ===================== */
 @media (max-width: 768px) {
 
-  /* Fixed header */
+  /* Lock header height */
   header {
     position: fixed;
     top: 0;
@@ -207,15 +221,19 @@ header {
 
   .nav {
     height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 0 16px;
   }
 
-  /* Show toggle */
+  /* Ensure toggle is visible */
   .menu-toggle {
     display: block;
+    font-size: 26px;
   }
 
-  /* Mobile menu overlay */
+  /* Make menu overlay instead of pushing page */
   .menu {
     position: fixed;
     top: 64px;
@@ -225,7 +243,6 @@ header {
     background: #df5110;
     display: none;
     flex-direction: column;
-    align-items: center;
     overflow-y: auto;
   }
 
@@ -233,51 +250,14 @@ header {
     display: flex;
   }
 
-  .menu a {
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    font-size: 16px;
-  }
-
-  /* Slider fits remaining screen */
+  /* Slider must start below fixed header */
   .slider {
     margin-top: 64px;
     height: calc(100vh - 64px);
     min-height: unset;
   }
-
-  /* Cards stack */
-  .cards {
-    grid-template-columns: 1fr;
-    margin: 40px auto;
-    padding: 0 16px 40px;
-  }
-
-  .card {
-    padding: 22px;
-  }
 }
-
-/* =====================
-   SMALL MOBILE (≤480px)
-   ===================== */
-@media (max-width: 480px) {
-
-  .slider {
-    height: 50vh;
-  }
-
-  .arrow {
-    font-size: 20px;
-    padding: 8px;
-  }
-
-  .slide-text h1 {
-    font-size: 22px;
-  }
-
-  .slide-text p {
-    font-size: 13px;
-  }
+img {
+  max-width: 100%;
+  height: auto;
 }
