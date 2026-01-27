@@ -1,3 +1,11 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: rgba(20, 20, 20, 0.877);
+}
+
+
+
 /* ===============================
    STUDENTS GRID
 ================================ */
@@ -10,7 +18,7 @@
 h1{
   text-align: center;
   color: #ffffff;
-  margin-top: 30px;
+  margin-top: 0.5px;
 }
 
 /* ===============================
@@ -19,7 +27,7 @@ h1{
 .student-card {
   background: #1c1c1c;
   border-radius: 16px;
-  padding: 24px 20px;
+  
   text-align: center;
   box-shadow: 0 8px 25px rgba(0,0,0,0.4);
   transition: transform 0.25s ease, box-shadow 0.25s ease;

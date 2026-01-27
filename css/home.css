@@ -9,7 +9,7 @@
 }
 
 body {
-  background: #f4f4f4;
+  background: rgba(45, 44, 44, 0.877);
   overflow-x: hidden; /* Prevents side-scrolling on mobile */
 }
 
@@ -95,7 +95,7 @@ body {
 }
 
 .card {
-  background: #ffffff;
+  background: #1b1b1ba0;
   padding: 30px;
   border-radius: 8px;
   text-align: center;
@@ -110,7 +110,7 @@ body {
 
 .card p {
   font-size: 15px;
-  color: #555;
+  color: #ffffff;
   line-height: 1.6;
 }
 

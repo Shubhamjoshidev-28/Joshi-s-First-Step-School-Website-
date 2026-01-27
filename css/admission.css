@@ -1,3 +1,10 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: rgba(20, 20, 20, 0.877);
+}
+
+
 /* RESET */
 * {
   margin: 0;
@@ -5,10 +12,13 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+.bg{
+  background-color:rgb(29, 29, 29);
+}
 
 /* PAGE */
 .admission-page {
-  background: rgb(29, 29, 29);
+  background: rgba(20, 20, 20, 0.877);
   color: #e5e7eb;
   padding-bottom: 80px;
 }
@@ -16,14 +26,15 @@
 /* HERO */
 .admission-hero {
   text-align: center;
-  padding: 80px 20px 40px;
+  margin-top: 20px ;
+ 
 }
 .admission-hero h1 {
   font-size: 42px;
 }
 .admission-hero p {
-  margin-top: 10px;
-  color: #cbd5e1;
+  font-size: 18px;
+  color: #bfbfbf;
 }
 
 /* CTA */
