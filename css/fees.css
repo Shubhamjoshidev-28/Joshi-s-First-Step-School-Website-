@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 body {
-  background: rgb(29, 29, 29);
+  background: rgba(6, 6, 6, 0.877);
   color: #e5e7eb;
   line-height: 1.6;
 }
@@ -20,7 +20,7 @@ body {
 }
 
 .card {
-  background: #161b20;
+  background: #1c1c1c;
   border-radius: 16px;
   padding: 28px;
   text-align: center !important;

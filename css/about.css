@@ -1,6 +1,8 @@
 html, body {
   margin: 0;
   padding: 0;
+  background: rgba(20, 20, 20, 0.877);
+  
 }
 
 
@@ -53,9 +55,9 @@ html, body {
   margin: 40px auto;
   padding: 0;
 
-  background: rgba(0, 0, 0, 0.65);
+  /* background: rgba(20, 20, 20, 0.877); */
   border-radius: 18px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+  /* box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55); */
 
   width: 100%;
   max-width: 1100px;
@@ -72,7 +74,7 @@ html, body {
 .about-card,
 .info-card,
 .value-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: #1c1c1c;
   border-radius: 14px;
   padding: 26px;
   color: #eaeaea;
@@ -87,7 +89,7 @@ html, body {
 /* ===== TWO COLUMN LAYOUT ===== */
 .two-col {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, auto));
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
 
@@ -105,7 +107,7 @@ html, body {
 
 /* ===== JOURNEY ===== */
 .journey {
-  background:  rgba(255, 255, 255, 0.08);
+  background:  #1c1c1c;
   border-radius: 18px;
   /* padding: 30px; */
   max-width: 900px;
@@ -114,12 +116,13 @@ html, body {
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 10px;
+  padding: 15px;
 }
 
 .timeline-item {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   color: #ffffff;
 }
 
@@ -128,6 +131,10 @@ html, body {
   font-weight: bold;
   min-width: 60px;
 }
+.teacher-card{
+  padding: 15px;
+}
+
 
 .bio{
   color: #dddddd;
@@ -137,7 +144,7 @@ html, body {
   color: #aaaaaa;
 }
 .teacher-card h3{
-  color: #e5e1e1;
+  color: #1c1c1c;
 }
 /* ===== TEXT COLORS ===== */
 .about-card p,
@@ -177,7 +184,7 @@ html, body {
 
   .timeline-item {
     flex-direction: column;
-    gap: 8px;
+    gap: 5px;
   }
 
   .timeline-item span {
