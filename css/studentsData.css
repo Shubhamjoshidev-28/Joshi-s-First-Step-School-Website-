@@ -18,7 +18,7 @@ html, body {
 h1{
   text-align: center;
   color: #ffffff;
-  margin-top: 0.5px;
+  margin-top: 10px;
 }
 
 /* ===============================
@@ -84,7 +84,7 @@ h1{
   max-width: 420px;
   margin: 20px auto 0;
   padding: 12px 16px;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   border: none;
   outline: none;
   background: #2a2a2a;
