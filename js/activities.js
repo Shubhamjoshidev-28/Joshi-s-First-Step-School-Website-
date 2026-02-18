@@ -16,13 +16,15 @@ fetch(SHEET_URL)
     rows.forEach(row => {
       if (!row.trim()) return;
 
-      // Proper CSV-safe parsing
+      // CSV-safe parsing
       const parts = row.match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g);
-      if (!parts || parts.length < 3) return;
+      if (!parts || parts.length < 2) return;
 
-      const title = parts[0].replace(/"/g, "").trim();
-      const date  = parts[1].replace(/"/g, "").trim();
-      const cover = parts[2].replace(/"/g, "").trim();
+      const title = parts[0]?.replace(/"/g, "").trim();
+      const cover = parts[parts.length - 1]?.replace(/"/g, "").trim();
+      const date  = parts.length > 2
+        ? parts[1]?.replace(/"/g, "").trim()
+        : "";
 
       if (!title || !cover) return;
 
@@ -35,7 +37,7 @@ fetch(SHEET_URL)
         </div>
         <div class="card-info">
           <h3>${title}</h3>
-          <span>${date}</span>
+          ${date ? `<span>${date}</span>` : ""}
         </div>
       `;
 
