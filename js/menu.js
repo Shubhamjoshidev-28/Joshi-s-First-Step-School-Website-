@@ -19,4 +19,5 @@ document.addEventListener("DOMContentLoaded", () => {
       menu.classList.remove("active");
     });
   });
+
 });
